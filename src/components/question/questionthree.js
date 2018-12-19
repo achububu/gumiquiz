@@ -17,6 +17,10 @@ class QuestionThree extends Component {
             this.props.nextQuestion();
         }
         else{
+            mamma = 1;
+            ele = 1;
+            cumu = 1;
+            nimbus = 1;
             this.props.answerWrong();
             this.props.nextQuestion();
         }
