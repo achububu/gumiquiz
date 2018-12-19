@@ -1,0 +1,262 @@
+@import "../helpers/mixins";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.body{
+  background: #dedede url("../img/newcloudbg.png") no-repeat center fixed;
+  min-height: 100vh;
+  padding: 100px;
+  font-size: 16px;
+  font-family: sans-serif;
+  .container{
+
+    width: 350px;
+    box-shadow: 0 5px 19px 5px rgba(0,0,0,.1);
+    margin: 0 auto;
+    border-radius: 0 100px;
+    padding: 0;
+    background: linear-gradient(45deg,hsla(0,0%,100%,.7),hsla(0,0%,100%,.7) 30%,#fff 0);
+    .title{
+      position: relative;
+      color: #fff;
+      border-radius: 0 100px 0 0;
+      background: linear-gradient(45deg,#97050d,#97050d 50%,#ec0901 0);
+      height: 230px;
+      width: 100%;
+      &-text{
+        position: relative;
+        top: 36%;
+        text-align: center;
+        h1{
+          margin: 0;
+          font-size: 2em;
+        }
+        h2{
+          margin-top: 0.1em;
+          font-size: 1.5em;
+          line-height: 1.2em;
+        }
+      }
+    }
+  .app{
+    &-container{
+      padding: 15px 15px 50px 15px;
+      .home{
+        @include flex();
+        @include css3-prefix(flex-wrap, wrap);
+        flex-wrap: wrap;
+        .block{
+          margin: 0 auto;
+          width: 50%;
+          height: 200px;
+          background-color: #00a849;
+          font-size: 1.3em;
+          color: #ffffff;
+          padding: 20px 0;
+          text-align: center;
+          cursor: pointer;
+          @include flex();
+          @include css3-prefix(justify-content,center);
+          @include css3-prefix(align-items,center);
+          @include css3-prefix(user-select,none);
+          &.intro{
+            background-color: #0f78b2;
+            &:hover{
+              background-color: lighten(#0f78b2,5%);
+            }
+          }
+          &.quiz{
+            background-color: #ff5840;
+            &:hover{
+              background-color: lighten(#ff5840,5%);
+            }
+          }
+          &.recruit-intern{
+            background-color: #08ba7a;
+            &:hover{
+              background-color: lighten(#08ba7a,5%);
+            }
+          }
+          &.recruit-staff{
+            background-color: #3d7899;
+            &:hover{
+              background-color: lighten(#3d7899,5%);
+            }
+          }
+        }
+      }
+      .introduction{
+        color: #666;
+        .content{
+          img{
+            margin: 0 auto;
+          }
+          p{
+            margin-top: 10px;
+            text-align: justify;
+          }
+        }
+      }
+      .recruitintern{
+        color: #666;
+        h3{
+          font-weight: 600;
+          text-align: center;
+          font-size: 1.3em;
+        }
+        a{
+          box-shadow: 0 4px 0 0 #0f78b2;
+          background-color: #1b8dcc;
+          border-radius: 0 5px 0 0;
+          color: #fff;
+          text-decoration: none;
+          width: 100%;
+          display: block;
+          padding: 10px;
+          margin-top: 15px;
+          outline: 0;
+          &:hover{
+            box-shadow: 0px 4px 0px 0px darken(#0f78b2,7%);
+          }
+          &:active{
+            transform: translate(0px, 3px);
+            -webkit-transform: translate(0px, 3px);
+            box-shadow: 0px 1px 0px 0px ;
+          }
+        }
+        .content-collapse{
+          padding: 10px;
+          background: #dedede;
+          form{
+            text-align: center;
+            input, textarea{
+              border: none;
+              background: #dedede;
+              border-bottom: 2px #f54747 solid;
+              box-shadow: none;
+              margin: 0 auto;
+              margin-bottom: 10px;
+              width: 80%;
+              text-align: center;
+              line-height: 3em;
+            }
+            input:valid, textarea:valid{
+              background-color: #fff;
+            }
+            button{
+              border: none;
+              box-shadow: 0 4px 0 0 #0f78b2;
+              background-color: #1b8dcc;
+              color: #fff;
+              text-decoration: none;
+              border-radius: 5px;
+              width: 40%;
+              display: block;
+              margin: 10px auto;
+              line-height: 2em;
+              outline: 0;
+
+              &:hover{
+                box-shadow: 0px 4px 0px 0px darken(#0f78b2,20%);
+              }
+              &:active{
+                transform: translate(0px, 3px);
+                -webkit-transform: translate(0px, 3px);
+                box-shadow: 0px 1px 0px 0px ;
+              }
+            }
+          }
+        }
+      }
+      .recruitstaff{
+        color:#666;
+        h3{
+          text-align: center;
+          font-size: 1.2em;
+          font-weight: 600;
+          margin: 20px 10px;
+        }
+        a{
+          box-shadow: 0 4px 0 0 #0f78b2;
+          background-color: #1b8dcc;
+          border-radius: 0 5px 0 0;
+          color: #fff;
+          text-decoration: none;
+          width: 100%;
+          display: block;
+          padding: 10px;
+          margin-top: 15px;
+          outline: 0;
+          &:hover{
+            box-shadow: 0px 4px 0px 0px darken(#0f78b2,7%);
+          }
+          &:active{
+            transform: translate(0px, 3px);
+            -webkit-transform: translate(0px, 3px);
+            box-shadow: 0px 1px 0px 0px ;
+          }
+        }
+        .content-collapse{
+          padding: 10px;
+          background: #dedede;
+          border-radius: 0 0 5px 5px;
+        }
+      }
+      .home-button{
+        margin: 15px 15px 15px 0;
+        font-size: 1.3em;
+        i{
+          cursor: pointer;
+          padding: 10px;
+          @include css3-prefix(user-select,none);
+          &.glyphicon::before{
+            margin-right: 10px;
+            vertical-align: sub;
+          }
+        }
+        &.back-btn{
+          text-align: center;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .logo{
+      width:70px;
+      position: relative;
+      left: 78%;
+      margin-bottom: 10px;
+    }
+  }
+  }
+}
+.hidden{
+  display: none;
+}
+.leaves{
+  animation: leaves .5s ease-in-out backwards;
+}
+@keyframes leaves {
+  0% {
+    transform: rotateX(-45deg) rotateY(-45deg);
+    opacity: 0;
+  }
+  75% {
+    transform: rotateX(10deg) rotateY(10deg);
+    opacity: 1;
+  }
+}
+.slidein{
+  animation: slidein 0.75s ease-in-out backwards;
+}
+@keyframes slidein {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+}
