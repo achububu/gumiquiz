@@ -6,7 +6,9 @@ class QuestionFour extends Component {
 
     nextQuestion = () => {
         this.props.nextQuestion();
-        if (value === '4' || value === 'four'){
+        let valueLoweCase  = value.toLowerCase();
+
+        if (parseInt(value) === 4|| valueLoweCase === 'four'){
             value = '';
             this.answerRight();
             this.props.nextQuestion();
@@ -23,7 +25,7 @@ class QuestionFour extends Component {
     };
 
     checkAnswer = (e) =>{
-        value = (e.target.value).toString();
+        value = (e.target.value);
     };
 
 
