@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class StaffPage extends Component {
 
+    //TODO: Đặt lại tên hàm liên quan đến trang HOME
     setPageToShow =  () => {
         this.props.setPageToShow(0);
     };

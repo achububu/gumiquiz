@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+//TODO: đáp án bị tràn ra ngoài
 class QuestionTwo extends Component {
 
     nextQuestion = (e) => {

@@ -6,6 +6,9 @@ import QuestionFour from './question/questionfour'
 import QuestionFinish from './question/questionfinish'
 import QuestionBegin from "./question/questionbegin";
 
+//TODO: đặt lại tên file là quizPage
+//TODO: thêm form điền họ tên, email...
+//TODO: thêm nút quay lại home page
 
 class QuizPage extends Component {
 
